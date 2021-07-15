@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<script>
+const move = ['rock', 'paper', 'scissors']
+
+function computerPlay() {
+  return move[Math.floor(Math.random() * move.length)]
+}
+
+function playerPlay() {
+  return move[Math.floor(Math.random() * move.length)]
+}
+
+function playRound() {
+
+  const playerSelection = 'rock'
+	const computerSelection = computerPlay()
+
+  if (playerSelection === 'rock' && computerSelction === 'paper')
+    return 'You lost, paper beats rock.'
+  else if
+    (playerSelection === 'rock' && computerSelection === 'rock')
+    return 'Rock twice. It is a tie!'
+  else if
+    (playerSelection === 'rock' && computerSelection === 'scissors')
+    return 'Win! Rock beats scissors!'
+}
+
+function game() {
+  console.log(playRound())
+}
+
+console.log(game())
+</script>
+
+</html>
