@@ -1,37 +1,43 @@
 var userEingabe = prompt("Gib 'stein', 'schere' oder 'papier' ein.);
-var computerWahl = Math.random();
-if (computerWahl < 0.34) {
-    computerWahl = "stein";
-} else if(computerWahl <= 0.67) {
-    computerWahl = "papier";
-} else {
-    computerWahl = "schere";
+
+function computerPlay(max) {
+  return Math.floor(Math.random()*max);
 }
 
-var compare = function(userEingabe, computerWahl) {
-    if(userEingabe === computerWahl) {
+console.log(Math.random());
+
+if (computerPlay < 0.34) {
+    computerPlay = "stein";
+} else if(computerPlay <= 0.67) {
+    computerPlay = "papier";
+} else {
+    computerPlay = "schere";
+}
+
+var compare = function(userEingabe, computerPlay) {
+    if(userEingabe === computerPlay) {
     return "Unentschieden!";
 }
 if(userEingabe === "stein") {
-    if(computerWahl === "schere") {
+    if(computerPlay === "schere") {
         return "Stein gewinnt!";
     } else {
         return "Papier gewinnt!";
     }
 }
 if (userEingabe === "papier") {
-    if (computerWahl === "stein") {
+    if (computerPlay === "stein") {
         return "Papier gewinnt!";
     } else {
-        if (computerWahl === "schere") {
+        if (computerPlay === "schere") {
             return "Schere gewinnt!";
         }
     }
     if (userEingabe === "schere") {
-        if (computerWahl === "stein") {
+        if (computerPlay === "stein") {
             return "Stein gewinnt";
         } else {
-            if (computerWahl === "papier") {
+            if (computerPlay === "papier") {
                 return "Schere gewinnt!";
             }
         }
