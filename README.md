@@ -1,2 +1,1 @@
-# SSP
-# SSP
+Stein, Schere, Papier in JS
